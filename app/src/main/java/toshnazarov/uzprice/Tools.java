@@ -13,15 +13,15 @@ public class Tools {
     // region Variables
     public static SharedPreferences settings;
 
-    public final String url_xls_alcohol = "http://data.gov.uz/ru/datasets/download/65/xls";
-    public final String url_xls_bigmix = "http://data.gov.uz/ru/datasets/download/57/xls";
-    public final String url_xls_fuel = "http://data.gov.uz/ru/datasets/download/55/xls";
-    public final String url_xls_electricity = "http://data.gov.uz/ru/datasets/download/52/xls";
-    public final String url_json_tuitionfee = "http://data.gov.uz/ru/datasets/download/189/json";
-    public final String url_json_cols_tuitionfee = "http://data.gov.uz/ru/convert/download/189?ext=json";
-    public final String url_html_water = "http://www.suvsoz.uz/abonentam/tariffs";
-    public final String url_json_medicine = "http://data.gov.uz/ru/datasets/download/614/json";
-    public final String url_json_col_medicine = "http://data.gov.uz/ru/convert/download/614?ext=json";
+    public final static String url_xls_alcohol = "http://data.gov.uz/ru/datasets/download/65/xls";
+    public final static String url_xls_bigmix = "http://data.gov.uz/ru/datasets/download/57/xls";
+    public final static String url_xls_fuel = "http://data.gov.uz/ru/datasets/download/55/xls";
+    public final static String url_xls_electricity = "http://data.gov.uz/ru/datasets/download/52/xls";
+    public final static String url_json_tuitionfee = "http://data.gov.uz/ru/datasets/download/189/json";
+    public final static String url_json_col_tuitionfee = "http://data.gov.uz/ru/convert/download/189?ext=json";
+    public final static String url_html_water = "http://www.suvsoz.uz/abonentam/tariffs";
+    public final static String url_json_medicine = "http://data.gov.uz/ru/datasets/download/614/json";
+    public final static String url_json_col_medicine = "http://data.gov.uz/ru/convert/download/614?ext=json";
     // endregion
 
     public static byte[] download(String link) {
