@@ -17,10 +17,13 @@ public class MainActivity extends AppCompatActivity {
     private void initialize() {
         Tools.settings = getSharedPreferences("settings", MODE_PRIVATE);
 
-
+        String tuitionJSON = Tools.downloadString(Tools.url_json_tuitionfee);
+        String col_tuitionJSON = Tools.downloadString(Tools.url_json_col_tuitionfee);
+        String medicine = Tools.downloadString(Tools.url_json_medicine);
+        String col_medicine = Tools.downloadString(Tools.url_json_col_medicine);
     }
 
     private void updateDatabase(View view) {
-        
+
     }
 }
