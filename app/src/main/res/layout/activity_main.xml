@@ -30,7 +30,7 @@
         <ImageButton
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginBottom="1.5dp"
+            android:layout_marginBottom="1.0dp"
             android:background="@drawable/search_button_background"
             android:src="@drawable/search_icon" />
 
@@ -123,61 +123,4 @@
         </LinearLayout>
 
     </ScrollView>
-
-    <TableLayout
-        android:id="@+id/controls_container_main"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_margin="5dp"
-        android:shrinkColumns="*"
-        android:stretchColumns="*">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="end"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/profilecontrol_button_main"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                android:padding="8dp"
-                android:tag="MyProfile" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="end"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
-                android:padding="8dp"
-                android:tag="MediaContacts" />
-
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                android:padding="8dp" />
-        </LinearLayout>
-    </TableLayout>
-
 </RelativeLayout>
