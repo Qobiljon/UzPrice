@@ -12,6 +12,9 @@ import java.nio.charset.Charset;
 public class Tools {
     // region Variables
     public static SharedPreferences settings;
+
+    public final String url_xls_alcohol = "http://data.gov.uz/ru/datasets/download/65/xls";
+
     // endregion
 
     public static byte[] download(String link) {

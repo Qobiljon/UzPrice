@@ -14,4 +14,6 @@
     <string name="currency">Currensies</string>
     <string name="calculator">Calculator</string>
     <string name="assets">Assets</string>
+
+    <string name="update">Получить последние обновления цен</string>
 </resources>
