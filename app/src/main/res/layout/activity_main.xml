@@ -40,10 +40,13 @@
                 android:layout_height="128dp"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <ImageButton android:src="@drawable/communal"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@color/transparent"
+                    android:padding="10dp"/>
 
                 <ImageButton
                     android:layout_width="0dp"
