@@ -21,16 +21,16 @@
             android:background="@android:color/transparent"
             android:hint="Search"
             android:maxLines="1"
-            android:paddingLeft="8dp"
+            android:paddingLeft="12dp"
             android:paddingRight="8dp"
             android:singleLine="true"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
         <ImageButton
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginBottom="1.0dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="1.5dp"
             android:background="@drawable/search_button_background"
             android:src="@drawable/search_icon" />
 
@@ -44,28 +44,57 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:paddingLeft="16dp"
             android:paddingRight="16dp">
 
             <LinearLayout
-                android:background="@drawable/button_background"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:background="@color/transparent"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
+                    android:background="@color/transparent"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/communal" />
 
                 <TextView
-                    android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/comunal"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@color/transparent"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/products" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/products"
+                    android:textSize="24dp" />
 
             </LinearLayout>
 

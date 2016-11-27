@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">UzPrice</string>
     <string name="quotation">все цены у вас в кармане</string>
+
+    <string name="comunal">Цены коммунальных услуг</string>
+    <string name="products">Цены пищевых продуктов</string>
 </resources>
