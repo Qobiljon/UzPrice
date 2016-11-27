@@ -1,5 +1,7 @@
 package toshnazarov.uzprice;
 
+import android.content.SharedPreferences;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,6 +10,10 @@ import java.nio.charset.Charset;
 
 @SuppressWarnings("unused")
 public class Tools {
+    // region Variables
+    public static SharedPreferences settings;
+    // endregion
+
     public static byte[] download(String link) {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         InputStream is = null;
