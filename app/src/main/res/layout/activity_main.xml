@@ -123,7 +123,6 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_background"
                 android:clickable="true"
-                android:contentDescription="@string/fuel"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -131,10 +130,10 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
-                    android:contentDescription="@string/fuel"
+                    android:contentDescription="@string/transportation"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/fuel" />
+                    android:src="@drawable/transportation" />
 
                 <View
                     android:layout_width="1px"
@@ -147,7 +146,7 @@
                     android:layout_weight="1"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:text="@string/fuel"
+                    android:text="@string/transportation"
                     android:textSize="@dimen/textview_font_size" />
 
             </LinearLayout>
@@ -165,10 +164,10 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
-                    android:contentDescription="@string/university"
+                    android:contentDescription="@string/education"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/university" />
+                    android:src="@drawable/education" />
 
                 <View
                     android:layout_width="1px"
@@ -181,7 +180,7 @@
                     android:layout_weight="1"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:text="@string/university"
+                    android:text="@string/education"
                     android:textSize="@dimen/textview_font_size" />
 
             </LinearLayout>
@@ -199,10 +198,10 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
-                    android:contentDescription="@string/stipend"
+                    android:contentDescription="@string/tools"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/scholar" />
+                    android:src="@drawable/tools" />
 
                 <View
                     android:layout_width="1px"
@@ -215,178 +214,7 @@
                     android:layout_weight="1"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:text="@string/stipend"
-                    android:textSize="@dimen/textview_font_size" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/button_background"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@color/transparent"
-                    android:contentDescription="@string/fine"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/fine" />
-
-                <View
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"
-                    android:background="@color/black" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="@string/fine"
-                    android:textSize="@dimen/textview_font_size" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/button_background"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@color/transparent"
-                    android:contentDescription="@string/ticket"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ticket" />
-
-                <View
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"
-                    android:background="@color/black" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="@string/ticket"
-                    android:textSize="@dimen/textview_font_size" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/button_background"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@color/transparent"
-                    android:contentDescription="@string/currency"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/currency" />
-
-                <View
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"
-                    android:background="@color/black" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="@string/currency"
-                    android:textSize="@dimen/textview_font_size" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/button_background"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@color/transparent"
-                    android:contentDescription="@string/calculator"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/calculator" />
-
-                <View
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"
-                    android:background="@color/black" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="@string/calculator"
-                    android:textSize="@dimen/textview_font_size" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/button_background"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageButton
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:background="@color/transparent"
-                    android:contentDescription="@string/assets"
-                    android:padding="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/assets" />
-
-                <View
-                    android:layout_width="1px"
-                    android:layout_height="match_parent"
-                    android:background="@color/black" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp"
-                    android:text="@string/assets"
+                    android:text="@string/tools"
                     android:textSize="@dimen/textview_font_size" />
 
             </LinearLayout>
