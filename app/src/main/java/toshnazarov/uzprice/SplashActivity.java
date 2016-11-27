@@ -1,5 +1,6 @@
 package toshnazarov.uzprice;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,6 +37,25 @@ public class SplashActivity extends AppCompatActivity {
                 Animation title_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.title_anim);
                 Animation quot_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.title_anim);
 
+                quot_in.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        animations_finished = true;
+                        if (operations_finished)
+                            closeSplashScreen();
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+
                 title.startAnimation(title_in);
                 quot.startAnimation(quot_in);
             }
@@ -48,8 +68,19 @@ public class SplashActivity extends AppCompatActivity {
         icon.startAnimation(icon_anim);
         // endregion
 
-        // region Process startup operations
-        
+        // region App startup operations
+        operations_finished = true;
+        if (animations_finished)
+            closeSplashScreen();
         // endregion
+    }
+
+    // region Variables
+    private boolean animations_finished = false;
+    private boolean operations_finished = false;
+    // endregion
+
+    void closeSplashScreen() {
+
     }
 }
