@@ -81,6 +81,13 @@ public class SplashActivity extends AppCompatActivity {
     // endregion
 
     void closeSplashScreen() {
+        Intent main = new Intent(getApplicationContext(), MainActivity.class);
+        startActivityForResult(main, 0);
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        finish();
     }
 }
