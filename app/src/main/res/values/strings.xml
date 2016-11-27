@@ -2,6 +2,8 @@
     <string name="app_name">UzPrice</string>
     <string name="quotation">все цены у вас в кармане</string>
 
+    <string name="search">Поиск</string>
+
     <string name="comunal">Цены коммунальных услуг</string>
     <string name="products">Цены пищевых продуктов</string>
     <string name="fuel">Fuel</string>

@@ -19,15 +19,16 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:hint="Search"
+            android:hint="@string/search"
             android:maxLines="1"
             android:paddingLeft="12dp"
-            android:paddingRight="8dp"
+            android:paddingRight="12dp"
             android:singleLine="true"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
         <ImageButton
+            android:contentDescription="@string/search"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginBottom="1.5dp"
@@ -61,6 +62,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
+                    android:contentDescription="@string/comunal"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/communal" />
@@ -94,6 +96,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
+                    android:contentDescription="@string/products"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/products" />
@@ -120,6 +123,7 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_background"
                 android:clickable="true"
+                android:contentDescription="@string/fuel"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -160,6 +164,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
+                    android:contentDescription="@string/university"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/university" />
@@ -193,6 +198,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
+                    android:contentDescription="@string/scholar"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/scholar" />
@@ -226,6 +232,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
+                    android:contentDescription="@string/fine"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/fine" />
@@ -259,6 +266,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
+                    android:contentDescription="@string/ticket"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/ticket" />
@@ -292,6 +300,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
+                    android:contentDescription="@string/currency"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/currency" />
@@ -325,6 +334,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
+                    android:contentDescription="@string/calculator"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/calculator" />
@@ -346,9 +356,9 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginBottom="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/button_background"
                 android:clickable="true"
@@ -359,6 +369,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
+                    android:contentDescription="@string/assets"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/assets" />
