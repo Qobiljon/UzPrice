@@ -63,7 +63,7 @@
                 android:orientation="horizontal"
                 android:tag="communal">
 
-                <ImageButton
+                <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
@@ -99,7 +99,7 @@
                 android:orientation="horizontal"
                 android:tag="products">
 
-                <ImageButton
+                <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
@@ -135,7 +135,7 @@
                 android:orientation="horizontal"
                 android:tag="transport">
 
-                <ImageButton
+                <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
@@ -171,7 +171,7 @@
                 android:orientation="horizontal"
                 android:tag="education">
 
-                <ImageButton
+                <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
@@ -207,7 +207,7 @@
                 android:orientation="horizontal"
                 android:tag="tools">
 
-                <ImageButton
+                <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"

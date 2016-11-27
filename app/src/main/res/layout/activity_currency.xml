@@ -5,19 +5,46 @@
     android:layout_height="match_parent"
     tools:context="toshnazarov.uzprice.CurrencyActivity">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <TextView
+        android:id="@+id/textview_info"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Info"
+        android:padding="@dimen/margin_elems"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/update_title_size" />
 
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button_currency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/textview_info"
+        android:background="@drawable/currency_button_background"
+        android:padding="@dimen/margin_elems"
+        android:text="USD"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/update_title_size" />
 
-        <ImageButton
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_calculator"
+        android:layout_below="@+id/button_currency"
+        android:gravity="center"
+        android:text="1USD = 3000.06 sum"
+        android:textSize="@dimen/update_title_size" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/button_calculator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/currency_button_background"
+        android:text="Calculator"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textview_font_size" />
 
 </RelativeLayout>
