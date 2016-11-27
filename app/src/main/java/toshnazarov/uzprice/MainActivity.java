@@ -1,8 +1,15 @@
 package toshnazarov.uzprice;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,13 +24,65 @@ public class MainActivity extends AppCompatActivity {
     private void initialize() {
         Tools.settings = getSharedPreferences("settings", MODE_PRIVATE);
 
+        mainContainer = findViewById(R.id.main_container);
+        search_button = (ImageButton) findViewById(R.id.button_search);
+        search_text = (EditText) findViewById(R.id.edittext_search);
 
+        search_text.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    search_button.performClick();
+                }
+                return false;
+            }
+        });
     }
 
-    private void updateDatabase(View view) {
-        String tuitionJSON = Tools.downloadString(Tools.url_json_tuitionfee);
-        String col_tuitionJSON = Tools.downloadString(Tools.url_json_col_tuitionfee);
-        String medicine = Tools.downloadString(Tools.url_json_medicine);
-        String col_medicine = Tools.downloadString(Tools.url_json_col_medicine);
+    // region Variables
+    private View currentContainer;
+    private View mainContainer;
+    private ImageButton search_button;
+    private EditText search_text;
+    // endregion
+
+    public void moveToScreen(View view) {
+        switch (view.getTag().toString()) {
+            case "tools":
+                currentContainer = findViewById(R.id.tools_container);
+                break;
+            default:
+                break;
+        }
+
+        if (currentContainer != null) {
+            mainContainer.setVisibility(View.GONE);
+            currentContainer.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void updateDatabase(View view) {
+        Intent intent = new Intent(getApplicationContext(), UpdateActivity.class);
+        startActivityForResult(intent, 0);
+    }
+
+    public void searchClick(View view) {
+        String query = search_text.getText().toString();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (currentContainer == null) {
+            super.onBackPressed();
+        } else {
+            mainContainer.setVisibility(View.VISIBLE);
+            currentContainer.setVisibility(View.GONE);
+            currentContainer = null;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }

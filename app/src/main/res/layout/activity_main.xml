@@ -14,7 +14,7 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <EditText
+        <EditText android:id="@+id/edittext_search"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -28,6 +28,7 @@
             android:textColorHint="@color/white" />
 
         <ImageButton
+            android:id="@+id/button_search"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginBottom="1.5dp"
@@ -38,6 +39,7 @@
     </LinearLayout>
 
     <ScrollView
+        android:id="@+id/main_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/search_layout">
@@ -192,7 +194,9 @@
                 android:background="@drawable/button_background"
                 android:clickable="true"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:onClick="moveToScreen"
+                android:orientation="horizontal"
+                android:tag="tools">
 
                 <ImageButton
                     android:layout_width="64dp"
@@ -222,5 +226,10 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <include
+        android:id="@+id/tools_container"
+        layout="@layout/tools_layout"
+        android:visibility="gone" />
 
 </RelativeLayout>

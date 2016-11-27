@@ -1,144 +1,151 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:orientation="vertical"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:layout_height="match_parent"
+    android:layout_below="@id/search_layout">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:background="@color/transparent"
-            android:contentDescription="@string/currency"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/currency" />
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="match_parent"
-            android:background="@color/black" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:text="@string/currency"
-            android:textSize="@dimen/textview_font_size" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button_background"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
 
-        <ImageButton
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:background="@color/transparent"
-            android:contentDescription="@string/calculator"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/calculator" />
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="match_parent"
-            android:background="@color/black" />
-
-        <TextView
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:text="@string/calculator"
-            android:textSize="@dimen/textview_font_size" />
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/currency"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/currency" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/currency"
+                android:textSize="@dimen/textview_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/calculator"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/calculator" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/calculator"
+                android:textSize="@dimen/textview_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/assets"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/assets" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/assets"
+                android:textSize="@dimen/textview_font_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="updateDatabase"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@color/transparent"
+                android:contentDescription="@string/update"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/update" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/update"
+                android:textSize="@dimen/textview_font_size" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_background"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:background="@color/transparent"
-            android:contentDescription="@string/assets"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/assets" />
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="match_parent"
-            android:background="@color/black" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:text="@string/assets"
-            android:textSize="@dimen/textview_font_size" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/button_background"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:background="@color/transparent"
-            android:contentDescription="@string/update"
-            android:padding="10dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/update" />
-
-        <View
-            android:layout_width="1px"
-            android:layout_height="match_parent"
-            android:background="@color/black" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="8dp"
-            android:paddingRight="8dp"
-            android:text="@string/update"
-            android:textSize="@dimen/textview_font_size" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>
