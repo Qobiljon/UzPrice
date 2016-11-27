@@ -28,11 +28,11 @@
             android:textColorHint="@color/white" />
 
         <ImageButton
-            android:contentDescription="@string/search"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginBottom="1.5dp"
             android:background="@drawable/search_button_background"
+            android:contentDescription="@string/search"
             android:src="@drawable/search_icon" />
 
     </LinearLayout>
@@ -62,7 +62,7 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
-                    android:contentDescription="@string/comunal"
+                    android:contentDescription="@string/communal"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/communal" />
@@ -78,7 +78,7 @@
                     android:layout_weight="1"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:text="@string/comunal"
+                    android:text="@string/communal"
                     android:textSize="@dimen/textview_font_size" />
 
             </LinearLayout>
@@ -128,10 +128,10 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:contentDescription="@string/fuel"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
+                    android:contentDescription="@string/fuel"
                     android:padding="10dp"
                     android:scaleType="fitCenter"
                     android:src="@drawable/fuel" />

@@ -4,7 +4,7 @@
 
     <string name="search">Поиск</string>
 
-    <string name="comunal">Цены коммунальных услуг</string>
+    <string name="communal">Цены коммунальных услуг</string>
     <string name="products">Цены пищевых продуктов</string>
     <string name="fuel">Fuel</string>
     <string name="university">University</string>
@@ -14,4 +14,7 @@
     <string name="currency">Currensies</string>
     <string name="calculator">Calculator</string>
     <string name="assets">Assets</string>
+    <string name="transportation">Transportation</string>
+    <string name="education">Education</string>
+    <string name="tools">Tools</string>
 </resources>
