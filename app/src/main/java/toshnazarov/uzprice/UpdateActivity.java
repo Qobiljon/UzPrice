@@ -4,6 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
 public class UpdateActivity extends AppCompatActivity {
 
     @Override
@@ -13,7 +16,8 @@ public class UpdateActivity extends AppCompatActivity {
     }
 
     public void updateClick(View view) {
-        String data;
+        String raw;
+        String[] cols;
 
         switch (view.getTag().toString()) {
             case "communal":
@@ -23,14 +27,24 @@ public class UpdateActivity extends AppCompatActivity {
             case "transport":
                 break;
             case "tuitionfee":
-                break;
+                raw = Tools.downloadString(Tools.url_json_tuitionfee);
+            {
+                try {
+                    JSONArray arr = new JSONArray(Tools.downloadString(Tools.url_json_col_tuitionfee));
+                    cols = new String[arr.length()];
+                    for (int n = 0; n < cols.length; n++) {
+                        //cols[n] = arr.get(n);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+            break;
             default:
                 break;
         }
 
-        Tools.downloadString(Tools.url_json_tuitionfee);
-        Tools.downloadString(Tools.url_json_col_tuitionfee);
-        Tools.downloadString(Tools.url_json_medicine);
-        Tools.downloadString(Tools.url_json_col_medicine);
+        //Tools.downloadString(Tools.url_json_medicine);
+        //Tools.downloadString(Tools.url_json_col_medicine);
     }
 }
