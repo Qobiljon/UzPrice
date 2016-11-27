@@ -4,16 +4,19 @@
 
     <string name="search">Поиск</string>
 
-    <string name="comunal">Цены коммунальных услуг</string>
+    <string name="communal">Цены коммунальных услуг</string>
     <string name="products">Цены пищевых продуктов</string>
-    <string name="fuel">Fuel</string>
-    <string name="university">University</string>
-    <string name="scholar">Scholarship</string>
-    <string name="fine">Fines</string>
-    <string name="ticket">Tickets</string>
-    <string name="currency">Currensies</string>
-    <string name="calculator">Calculator</string>
-    <string name="assets">Assets</string>
+    <string name="fuel">Горючее</string>
+    <string name="university">Университеты</string>
+    <string name="stipend">Стипендии</string>
+    <string name="fine">Штрафы</string>
+    <string name="ticket">Билеты</string>
+    <string name="currency">Валюты</string>
+    <string name="calculator">Валютный калькулятор</string>
+    <string name="assets">Ценные бумаги</string>
+    <string name="transportation">Транспорт</string>
+    <string name="education">Обучение</string>
+    <string name="tools">Полезные функции</string>
 
     <string name="update">Получить последние обновления цен</string>
 </resources>
