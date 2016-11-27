@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 title.setVisibility(View.VISIBLE);
                 quot.setVisibility(View.VISIBLE);
 
-                Animation title_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.title_anim);
-                Animation quot_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.quot_anim);
+                Animation title_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.ad_title);
+                Animation quot_in = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.ad_title);
 
                 title.startAnimation(title_in);
                 quot.startAnimation(quot_in);
