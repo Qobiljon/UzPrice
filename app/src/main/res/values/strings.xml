@@ -9,4 +9,7 @@
     <string name="scholar">Scholarship</string>
     <string name="fine">Fines</string>
     <string name="ticket">Tickets</string>
+    <string name="currency">Currensies</string>
+    <string name="calculator">Calculator</string>
+    <string name="assets">Assets</string>
 </resources>
