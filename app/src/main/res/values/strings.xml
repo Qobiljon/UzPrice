@@ -23,6 +23,8 @@
     <string name="calculator">Валютный калькулятор</string>
     <string name="assets">Ценные бумаги</string>
     <string name="tools">Полезные функции</string>
+    <string name="water">Water</string>
+    <string name="electricity">Electricity</string>
 
     <string name="update">Получить последние обновления цен</string>
 </resources>
