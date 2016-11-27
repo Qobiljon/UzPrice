@@ -174,6 +174,42 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_background"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="updateClick"
+                android:orientation="horizontal"
+                android:tag="currency">
+
+                <ImageButton
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:background="@color/transparent"
+                    android:contentDescription="@string/education"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/currency" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="@string/update_currency"
+                    android:textSize="@dimen/textview_font_size" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>

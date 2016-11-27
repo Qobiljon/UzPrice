@@ -40,6 +40,9 @@ public class UpdateActivity extends AppCompatActivity {
                 }
             }
             break;
+            case "currency":
+
+                break;
             default:
                 break;
         }

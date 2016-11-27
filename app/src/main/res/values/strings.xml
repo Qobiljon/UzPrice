@@ -13,6 +13,7 @@
     <string name="update_products">Обновить цены пищевых продуктов</string>
     <string name="update_transportation">Обновить цены в разделе "Транспорт"</string>
     <string name="update_education">Обновить цены в разделе "Обучение"</string>
+    <string name="update_currency">Обновить валютные данные</string>
 
     <string name="fuel">Горючее</string>
     <string name="university">Университеты</string>
