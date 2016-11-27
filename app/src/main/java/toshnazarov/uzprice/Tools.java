@@ -2,6 +2,10 @@ package toshnazarov.uzprice;
 
 import android.content.SharedPreferences;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,11 +21,10 @@ public class Tools {
     public final static String url_xls_bigmix = "http://data.gov.uz/ru/datasets/download/57/xls";
     public final static String url_xls_fuel = "http://data.gov.uz/ru/datasets/download/55/xls";
     public final static String url_xls_electricity = "http://data.gov.uz/ru/datasets/download/52/xls";
-    public final static String url_json_tuitionfee = "http://data.gov.uz/ru/datasets/download/189/json";
-    public final static String url_json_col_tuitionfee = "http://data.gov.uz/ru/convert/download/189?ext=json";
     public final static String url_html_water = "http://www.suvsoz.uz/abonentam/tariffs";
-    public final static String url_json_medicine = "http://data.gov.uz/ru/datasets/download/614/json";
-    public final static String url_json_col_medicine = "http://data.gov.uz/ru/convert/download/614?ext=json";
+
+    public final static int no_tuitionfee = 189;
+    public final static int no_medicine = 614;
     // endregion
 
     public static byte[] download(String link) {
@@ -52,6 +55,39 @@ public class Tools {
             e.printStackTrace();
         }
         return res;
+    }
+
+    public static String downloadCols(int dataset) {
+        String colURL = String.format("http://data.gov.uz/ru/api/v1/json/dataset/%d?access_key=d399732be30e9e7528021bd292101ab8", dataset);
+        return downloadString(colURL);
+    }
+
+    public static String downloadRaw(int dataset) {
+        String versionURL = String.format(
+                "http://data.gov.uz/ru/api/v1/json/dataset/%d/version?access_key=d399732be30e9e7528021bd292101ab8",
+                dataset);
+        int version;
+        {
+            String temp = new String(download(versionURL));
+            version = Integer.parseInt(temp.substring(7, temp.indexOf(',')));
+            try {
+                JSONArray arr = new JSONArray(temp);
+                for (int n = 0; n < arr.length(); n++) {
+                    JSONObject object = arr.getJSONObject(n);
+                    if (version < object.getInt("id"))
+                        version = object.getInt("id");
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
+
+        String rawURL = String.format(
+                "http://data.gov.uz/ru/api/v1/json/dataset/%d/version/%d?access_key=d399732be30e9e7528021bd292101ab8",
+                dataset, version);
+
+        return new String(download(rawURL));
     }
 
     public static String downloadString(String link) {
