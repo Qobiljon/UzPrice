@@ -75,57 +75,28 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        if (currentContainer != null)
-            animate(true);
+        if (currentContainer != null) {
+            mainContainer.setVisibility(View.GONE);
+            currentContainer.setVisibility(View.VISIBLE);
+        }
     }
 
-    private void animate(boolean isForward) {
-        if (isForward) {
-            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out_reverse);
-            animation.setAnimationListener(new Animation.AnimationListener() {
-                @Override
-                public void onAnimationStart(Animation animation) {
-
-                }
-
-                @Override
-                public void onAnimationEnd(Animation animation) {
-                    Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in_reverse);
-                    mainContainer.setVisibility(View.GONE);
-                    currentContainer.setVisibility(View.VISIBLE);
-                    currentContainer.clearAnimation();
-                    currentContainer.startAnimation(animation1);
-                }
-
-                @Override
-                public void onAnimationRepeat(Animation animation) {
-
-                }
-            });
-            mainContainer.startAnimation(animation);
-        } else {
-            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out);
-            animation.setAnimationListener(new Animation.AnimationListener() {
-                @Override
-                public void onAnimationStart(Animation animation) {
-
-                }
-
-                @Override
-                public void onAnimationEnd(Animation animation) {
-                    Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
-                    currentContainer.setVisibility(View.GONE);
-                    mainContainer.setVisibility(View.VISIBLE);
-                    mainContainer.clearAnimation();
-                    mainContainer.startAnimation(animation1);
-                }
-
-                @Override
-                public void onAnimationRepeat(Animation animation) {
-
-                }
-            });
-            currentContainer.startAnimation(animation);
+    public void toolsClick(View view) {
+        switch (view.getTag().toString()) {
+            case "currency": {
+                Intent intent = new Intent(getApplicationContext(), CurrencyActivity.class);
+                startActivityForResult(intent, 0);
+            }
+            break;
+            case "calculator": {
+                Intent intent = new Intent(getApplicationContext(), CalculatorActivity.class);
+                startActivityForResult(intent, 0);
+            }
+            break;
+            case "assets":
+                break;
+            default:
+                break;
         }
     }
 
@@ -143,7 +114,8 @@ public class MainActivity extends AppCompatActivity {
         if (currentContainer == null) {
             super.onBackPressed();
         } else {
-            animate(false);
+            mainContainer.setVisibility(View.VISIBLE);
+            currentContainer.setVisibility(View.GONE);
             currentContainer = null;
         }
     }

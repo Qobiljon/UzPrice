@@ -17,7 +17,9 @@
             android:background="@drawable/button_background"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:onClick="toolsClick"
+            android:orientation="horizontal"
+            android:tag="currency">
 
             <ImageView
                 android:layout_width="64dp"
@@ -51,7 +53,9 @@
             android:background="@drawable/button_background"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:onClick="toolsClick"
+            android:orientation="horizontal"
+            android:tag="calculator">
 
             <ImageView
                 android:layout_width="64dp"
@@ -85,7 +89,9 @@
             android:background="@drawable/button_background"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:onClick="toolsClick"
+            android:orientation="horizontal"
+            android:tag="assets">
 
             <ImageView
                 android:layout_width="64dp"
