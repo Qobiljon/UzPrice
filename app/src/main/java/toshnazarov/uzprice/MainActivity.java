@@ -1,13 +1,13 @@
 package toshnazarov.uzprice;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -75,9 +75,57 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
-        if (currentContainer != null) {
-            mainContainer.setVisibility(View.GONE);
-            currentContainer.setVisibility(View.VISIBLE);
+        if (currentContainer != null)
+            animate(true);
+    }
+
+    private void animate(boolean isForward) {
+        if (isForward) {
+            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out_reverse);
+            animation.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in_reverse);
+                    mainContainer.setVisibility(View.GONE);
+                    currentContainer.setVisibility(View.VISIBLE);
+                    currentContainer.clearAnimation();
+                    currentContainer.startAnimation(animation1);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
+            mainContainer.startAnimation(animation);
+        } else {
+            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_out);
+            animation.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
+                    currentContainer.setVisibility(View.GONE);
+                    mainContainer.setVisibility(View.VISIBLE);
+                    mainContainer.clearAnimation();
+                    mainContainer.startAnimation(animation1);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
+            currentContainer.startAnimation(animation);
         }
     }
 
@@ -95,8 +143,7 @@ public class MainActivity extends AppCompatActivity {
         if (currentContainer == null) {
             super.onBackPressed();
         } else {
-            mainContainer.setVisibility(View.VISIBLE);
-            currentContainer.setVisibility(View.GONE);
+            animate(false);
             currentContainer = null;
         }
     }
