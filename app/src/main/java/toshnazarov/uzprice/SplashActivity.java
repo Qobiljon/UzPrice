@@ -6,19 +6,19 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-public class MainActivity extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_splash);
 
         initialize();
     }
 
     private void initialize() {
+        // region Animations on splash screen
         View icon = findViewById(R.id.app_icon);
-
         Animation icon_anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.icon_anim);
         icon_anim.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -45,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
         icon.startAnimation(icon_anim);
+        // endregion
+
+        
     }
 }
