@@ -21,6 +21,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateDatabase(View view) {
-        
+
     }
 }
