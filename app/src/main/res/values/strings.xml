@@ -4,4 +4,9 @@
 
     <string name="comunal">Цены коммунальных услуг</string>
     <string name="products">Цены пищевых продуктов</string>
+    <string name="fuel">Fuel</string>
+    <string name="university">University</string>
+    <string name="scholar">Scholarship</string>
+    <string name="fine">Fines</string>
+    <string name="ticket">Tickets</string>
 </resources>
