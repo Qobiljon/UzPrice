@@ -60,7 +60,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
@@ -94,7 +94,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
@@ -128,7 +128,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
@@ -162,7 +162,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <ImageButton
+                <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
@@ -198,7 +198,7 @@
                 android:orientation="horizontal"
                 android:tag="tools">
 
-                <ImageButton
+                <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@color/transparent"
