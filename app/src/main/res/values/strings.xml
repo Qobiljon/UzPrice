@@ -6,6 +6,14 @@
 
     <string name="communal">Цены коммунальных услуг</string>
     <string name="products">Цены пищевых продуктов</string>
+    <string name="transportation">Транспорт</string>
+    <string name="education">Обучение</string>
+
+    <string name="update_communal">Обновить цены коммунальных услуг</string>
+    <string name="update_products">Обновить цены пищевых продуктов</string>
+    <string name="update_transportation">Обновить цены в разделе "Транспорт"</string>
+    <string name="update_education">Обновить цены в разделе "Обучение"</string>
+
     <string name="fuel">Горючее</string>
     <string name="university">Университеты</string>
     <string name="stipend">Стипендии</string>
@@ -14,8 +22,6 @@
     <string name="currency">Валюты</string>
     <string name="calculator">Валютный калькулятор</string>
     <string name="assets">Ценные бумаги</string>
-    <string name="transportation">Транспорт</string>
-    <string name="education">Обучение</string>
     <string name="tools">Полезные функции</string>
 
     <string name="update">Получить последние обновления цен</string>
