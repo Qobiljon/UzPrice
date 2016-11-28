@@ -11,6 +11,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,9 +56,12 @@ public class MainActivity extends AppCompatActivity {
     private View communal_container;
     private View education_container;
     private View transport_container;
+
+    private boolean terminate = false;
     // endregion
 
     public void moveToScreen(View view) {
+        terminate = false;
         switch (view.getTag().toString()) {
             case "tools":
                 currentContainer = tools_container;
@@ -132,7 +136,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (currentContainer == null) {
-            super.onBackPressed();
+            if (terminate)
+                super.onBackPressed();
+            else {
+                terminate = true;
+                Toast.makeText(getApplicationContext(), getString(R.string.tap2quit), Toast.LENGTH_SHORT).show();
+            }
         } else {
             Animation disappear = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.disappear);
             disappear.setAnimationListener(new Animation.AnimationListener() {

@@ -31,4 +31,5 @@
     <string name="update">Получить последние обновления цен и валют</string>
 
     <string name="info_title">Информации о валюте:</string>
+    <string name="tap2quit">Пожалуйста, коснитесь еще раз чтобы выти из приложения!</string>
 </resources>
