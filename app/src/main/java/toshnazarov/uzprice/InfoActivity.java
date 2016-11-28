@@ -1,8 +1,13 @@
 package toshnazarov.uzprice;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.nio.charset.Charset;
 
 public class InfoActivity extends AppCompatActivity {
 
@@ -14,6 +19,8 @@ public class InfoActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         TextView info = (TextView) findViewById(R.id.info_text);
-        info.setText(bundle.getString("rawdata"));
+
+        String data = bundle.getString("rawdata");
+        info.setText(data);
     }
 }

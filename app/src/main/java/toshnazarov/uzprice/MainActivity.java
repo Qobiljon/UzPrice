@@ -13,6 +13,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -75,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
             case "transport":
                 currentContainer = transport_container;
                 break;
+            case "products":
+                break;
             default:
                 break;
         }
@@ -131,6 +136,33 @@ public class MainActivity extends AppCompatActivity {
 
     public void searchClick(View view) {
         String query = search_text.getText().toString();
+    }
+
+    public void infoClick(final View view) {
+        Executor exec = Executors.newCachedThreadPool();
+
+        exec.execute(new Runnable() {
+            @Override
+            public void run() {
+                String data = null;
+                switch (view.getTag().toString()) {
+                    case "info_tuition":
+                        data = Tools.downloadRaw(Tools.no_tuitionfee);
+                        break;
+                    case "info_stipend":
+                        data = Tools.downloadRaw(Tools.no_stipend);
+                        break;
+                    default:
+                        break;
+                }
+
+                Bundle bundle = new Bundle();
+                bundle.putString("rawdata", data);
+                Intent intent = new Intent(getApplicationContext(), InfoActivity.class);
+                intent.putExtras(bundle);
+                startActivityForResult(intent, 0);
+            }
+        });
     }
 
     @Override

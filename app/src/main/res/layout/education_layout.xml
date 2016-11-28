@@ -18,7 +18,9 @@
             android:background="@drawable/button_background"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:onClick="infoClick"
+            android:orientation="horizontal"
+            android:tag="info_tuition">
 
             <ImageView
                 android:layout_width="64dp"
@@ -52,7 +54,9 @@
             android:background="@drawable/button_background"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:onClick="infoClick"
+            android:orientation="horizontal"
+            android:tag="info_stipend">
 
             <ImageView
                 android:layout_width="64dp"

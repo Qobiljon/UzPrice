@@ -25,6 +25,7 @@ public class Tools {
 
     public final static int no_tuitionfee = 189;
     public final static int no_medicine = 614;
+    public final static int no_stipend = 808;
     // endregion
 
     public static byte[] download(String link) {
