@@ -76,8 +76,28 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (currentContainer != null) {
-            mainContainer.setVisibility(View.GONE);
-            currentContainer.setVisibility(View.VISIBLE);
+            Animation disappear = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.disappear);
+            disappear.setAnimationListener(new Animation.AnimationListener() {
+                Animation appear = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.appear);
+
+                @Override
+                public void onAnimationStart(Animation animation) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    mainContainer.setVisibility(View.GONE);
+                    currentContainer.setVisibility(View.VISIBLE);
+                    currentContainer.startAnimation(appear);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
+            mainContainer.startAnimation(disappear);
         }
     }
 
@@ -114,9 +134,29 @@ public class MainActivity extends AppCompatActivity {
         if (currentContainer == null) {
             super.onBackPressed();
         } else {
-            mainContainer.setVisibility(View.VISIBLE);
-            currentContainer.setVisibility(View.GONE);
-            currentContainer = null;
+            Animation disappear = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.disappear);
+            disappear.setAnimationListener(new Animation.AnimationListener() {
+                Animation appear = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.appear);
+
+                @Override
+                public void onAnimationStart(Animation animation) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    currentContainer.setVisibility(View.GONE);
+                    mainContainer.setVisibility(View.VISIBLE);
+                    mainContainer.startAnimation(appear);
+                    currentContainer = null;
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+
+                }
+            });
+            currentContainer.startAnimation(disappear);
         }
     }
 
