@@ -88,7 +88,7 @@ public class Tools {
                 "http://data.gov.uz/ru/api/v1/json/dataset/%d/version/%d?access_key=d399732be30e9e7528021bd292101ab8",
                 dataset, version);
 
-        return new String(download(rawURL));
+        return downloadString(rawURL);
     }
 
     public static String downloadString(String link) {

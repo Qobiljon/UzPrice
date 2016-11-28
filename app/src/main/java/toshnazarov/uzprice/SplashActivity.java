@@ -45,9 +45,9 @@ public class SplashActivity extends AppCompatActivity {
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
-                        animations_finished = true;
-                        if (operations_finished)
-                            closeSplashScreen();
+//                        animations_finished = true;
+//                        if (operations_finished)
+//                            closeSplashScreen();
                     }
 
                     @Override
@@ -69,9 +69,9 @@ public class SplashActivity extends AppCompatActivity {
         // endregion
 
         // region App startup operations
-        operations_finished = true;
-        if (animations_finished)
-            closeSplashScreen();
+//        operations_finished = true;
+//        if (animations_finished)
+//            closeSplashScreen();
         // endregion
     }
 
@@ -80,7 +80,7 @@ public class SplashActivity extends AppCompatActivity {
     private boolean operations_finished = false;
     // endregion
 
-    void closeSplashScreen() {
+    public void closeSplashScreen(View view) {
         Intent main = new Intent(getApplicationContext(), MainActivity.class);
         startActivityForResult(main, 0);
     }

@@ -1,6 +1,9 @@
 package toshnazarov.uzprice;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.TransitionDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
@@ -33,16 +36,44 @@ public class MainActivity extends AppCompatActivity {
         communal_container = findViewById(R.id.communal_container);
         education_container = findViewById(R.id.education_container);
         transport_container = findViewById(R.id.transport_container);
+        rootview = findViewById(R.id.root_container);
 
         mainContainer = findViewById(R.id.main_container);
         search_button = (ImageButton) findViewById(R.id.button_search);
         search_text = (EditText) findViewById(R.id.edittext_search);
+
+        search_text.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if (b) {
+                    ColorDrawable[] color = new ColorDrawable[]{new ColorDrawable(Color.WHITE), new ColorDrawable(Color.GRAY)};
+                    TransitionDrawable trans = new TransitionDrawable(color);
+                    trans.startTransition(700);
+                    rootview.setBackgroundDrawable(trans);
+                }
+            }
+        });
+
+        search_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ColorDrawable[] color = new ColorDrawable[]{new ColorDrawable(Color.WHITE), new ColorDrawable(Color.GRAY)};
+                TransitionDrawable trans = new TransitionDrawable(color);
+                trans.startTransition(700);
+                rootview.setBackgroundDrawable(trans);
+            }
+        });
 
         search_text.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     search_button.performClick();
+
+                    ColorDrawable[] color = new ColorDrawable[]{new ColorDrawable(Color.GRAY), new ColorDrawable(Color.WHITE)};
+                    TransitionDrawable trans = new TransitionDrawable(color);
+                    trans.startTransition(600);
+                    rootview.setBackgroundDrawable(trans);
                 }
                 return false;
             }
@@ -54,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
     private View mainContainer;
     private ImageButton search_button;
     private EditText search_text;
+    private View rootview;
 
     private View tools_container;
     private View communal_container;

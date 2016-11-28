@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="toshnazarov.uzprice.SplashActivity">
 
-    <ImageButton
+    <ImageButton android:onClick="closeSplashScreen"
         android:id="@+id/app_icon"
         android:layout_width="200dp"
         android:layout_height="200dp"
